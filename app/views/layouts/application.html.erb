@@ -11,19 +11,21 @@
   <body>
     <header class="row">
       <div class="circle">
-        <br />
-          JUST
+        <%= link_to root_path, class: 'logo' do %>
           <br />
-          PLAY
-          <br />
-          SPORTS
-        </div>
+            JUST
+            <br />
+            PLAY
+            <br />
+            SPORTS
+          </div>
+        <% end %>
       </div>
       <div class="col-4 slogan" >
         Splurting out unsolicited advice about sports since 2018
       </div>
       <div class="col-5 links">
-        <%= link_to 'Contribute', '#' %>
+        <%= link_to 'Contribute', new_quote_path %>
         <%= link_to 'About', '$' %>
       </div>
     </header>
@@ -39,7 +41,7 @@
       <div class="container">
         <div class="row">
           <div class="col-6">
-            <%= link_to "This isn't enough, I need more", "#", class: 'next-quote' %>
+            <%= link_to "This isn't enough, I need more", root_path, class: 'next-quote' %>
           </div>
           <div class="col-6 footer-blurb">
             Proudly constructed in Chicago, IL by <a href="http://thefirehoseproject.com">Jake</a><br />
