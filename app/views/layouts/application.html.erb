@@ -10,25 +10,28 @@
 
   <body>
     <header class="row">
-      <div class="circle">
+      <div class="col-3">
         <%= link_to root_path, class: 'logo' do %>
-          <br />
-            JUST
+          <div class="circle">
             <br />
-            PLAY
-            <br />
-            SPORTS
+              JUST
+              <br />
+              PLAY
+              <br />
+              SPORTS
           </div>
         <% end %>
       </div>
-      <div class="col col-sm-4 hidden-xs-down slogan" >
+      <div class="col col-sm-7 hidden-xs-down slogan" >
         Splurting out unsolicited advice about sports since 2018
       </div>
-      <div class="col-10 offset-1 offset-sm-0 col-sm-5 links">
-        <!-- Button trigger modal -->
-        <%= link_to 'Contribute', '#', data: {toggle: 'modal', target: '#myModal'} %>
-        &nbsp;&nbsp;
-        <%= link_to 'About', about_path %>
+      <div class="col-10 offset-1 offset-sm-0 col-sm-2 links">
+        <div class="float-center">
+          <!-- Button trigger modal -->
+          <%= link_to 'Contribute', '#', data: {toggle: 'modal', target: '#myModal'} %>
+          &nbsp;&nbsp;
+          <%= link_to 'About', about_path %>
+        </div>
       </div>
     </header>
 
@@ -62,6 +65,7 @@
     <hr />
 
     <br class="clear" />
+
     <div class="container">
       <% if flash[:error].present? %>
         <div class="col-10 offset-1 alert alert-danger">
